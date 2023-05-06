@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DefaultNamespace;
 using Interfaces;
 using Obstacles;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Mine : Obstacle
@@ -30,7 +31,7 @@ public class Mine : Obstacle
         transform.position = Vector2.MoveTowards(transform.position, transform.up * maxDistance, force);
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    public override void SpecialInteraction(Collider2D col)
     {
         col.gameObject.GetComponent<IDamageable>()?.TakeDamage(damage);
         Destroy(gameObject);

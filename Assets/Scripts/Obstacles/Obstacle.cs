@@ -25,6 +25,10 @@ namespace Obstacles
                 player.TakeDamage(collisionDamage);
                 Destroy(gameObject);
             }
+            SpecialInteraction(col);
         }
+
+        public virtual void SpecialInteraction(Collider2D col)
+        {}
     }
 }
