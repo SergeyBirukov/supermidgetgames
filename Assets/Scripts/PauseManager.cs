@@ -2,7 +2,7 @@
 
 public class PauseManager: MonoBehaviour
 {
-    public PauseState state;
+    public PauseState state = PauseState.Off;
     public static PauseManager Instance { get; private set; }
 
     private void Awake()

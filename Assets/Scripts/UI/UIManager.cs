@@ -18,8 +18,8 @@ namespace UI
         {
             if (Input.GetKeyDown(KeyCode.Escape) && PauseManager.Instance.state == PauseState.Off)
             {
-                PauseManager.Instance.PauseOn();
                 ShowPauseMenu();
+                PauseManager.Instance.PauseOn();
             }
         }
 
