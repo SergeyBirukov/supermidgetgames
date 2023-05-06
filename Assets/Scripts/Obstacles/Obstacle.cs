@@ -6,8 +6,8 @@ namespace Obstacles
 {
     public abstract class Obstacle: MonoBehaviour
     {
-        [SerializeField] private Rigidbody2D _rigidbody2D;
-        [SerializeField] private float speed;
+        [SerializeField] internal Rigidbody2D _rigidbody2D;
+        [SerializeField] internal float speed;
         [SerializeField] private int collisionDamage;
 
         private void Start()
