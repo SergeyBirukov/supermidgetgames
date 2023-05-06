@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
 using Interfaces;
+using Obstacles;
 using UnityEngine;
 
-public class Mine : MonoBehaviour
+public class Mine : Obstacle
 {
     private float force;
     private bool shot;
@@ -31,7 +32,7 @@ public class Mine : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        col.gameObject.GetComponent<IDamageable>().TakeDamage(damage);
+        col.gameObject.GetComponent<IDamageable>()?.TakeDamage(damage);
         Destroy(gameObject);
     }
 }
