@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 0}
   speed: 5
-  collisionDamage: 30
+  collisionDamage: 25
   health: 100
 --- !u!50 &2205856483809971639
 Rigidbody2D:

@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 0}
   speed: 5
-  collisionDamage: 30
+  collisionDamage: 25
   health: 100
 --- !u!61 &2101815353255093341
 BoxCollider2D:
