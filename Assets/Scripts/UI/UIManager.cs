@@ -11,7 +11,7 @@ namespace UI
 
         private void Start()
         {
-            Player.Instance.onDeath.AddListener(ShowDeathScreen);
+            FindObjectOfType<Player>().onDeath.AddListener(ShowDeathScreen);
         }
 
         private void Update()
