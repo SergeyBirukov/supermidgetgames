@@ -924,7 +924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7515120368209772291, guid: 6636759276912404b8dfe0d15fc141dd, type: 3}
       propertyPath: m_Name
-      value: ObstacleSpawner
+      value: IceSpawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6636759276912404b8dfe0d15fc141dd, type: 3}
