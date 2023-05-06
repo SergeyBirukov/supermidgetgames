@@ -8,7 +8,7 @@ public class Mine : MonoBehaviour
     private float force;
     private bool shot;
     [SerializeField] private float maxDistance = 100f;
-    [SerializeField] private float forceCoef = 0.1f;
+    [SerializeField] private float forceCoef = 0.01f;
     private void Update()
     {
         if (shot)
