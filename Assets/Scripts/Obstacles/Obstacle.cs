@@ -23,8 +23,8 @@ namespace Obstacles
             if (player)
             {
                 player.TakeDamage(collisionDamage);
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
         }
     }
 }
