@@ -7,6 +7,7 @@ using UnityEngine;
 public class Magnet : MonoBehaviour
 {
     [SerializeField] private Transform minePosition;
+    [SerializeField] private GameObject magnetEffect;
     private bool ReadyToShoot;
     [SerializeField] private float mineMoveDelta = 0.1f;
     [SerializeField] private float maxForce = 5f;
@@ -23,6 +24,7 @@ public class Magnet : MonoBehaviour
 
     private void GrabMine()
     {
+        magnetEffect.SetActive(true);
         Debug.Log("grab mine");
         if (!mine)
         {
@@ -54,6 +56,7 @@ public class Magnet : MonoBehaviour
 
     private void ShootMine()
     {
+        magnetEffect.SetActive(false);
         if (mine is null)
         {
             return;

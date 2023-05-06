@@ -13,6 +13,11 @@ namespace Obstacles
         private void Start()
         {
             _rigidbody2D = GetComponent<Rigidbody2D>();
+            SetupMoveDirection();
+        }
+
+        public virtual void SetupMoveDirection()
+        {
             _rigidbody2D.velocity = new Vector2(0, -speed);
         }
 
