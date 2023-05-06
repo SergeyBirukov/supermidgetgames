@@ -11,6 +11,7 @@ public class Microvawe : MonoBehaviour
     [SerializeField] private Transform laserFirePoint;
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private float damageInterval = 0.3f;
+    [SerializeField] private GameObject smoke;
     private float damageIntervalLeft;
     
 
@@ -21,8 +22,10 @@ public class Microvawe : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0))
             Shoot();
         if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
             lineRenderer.enabled = false;
-        
+            smoke.SetActive(false);
+        }
     }
 
     private void Shoot()
@@ -40,9 +43,25 @@ public class Microvawe : MonoBehaviour
             else
                 damageIntervalLeft -= Time.deltaTime;
 
+            if (ice)
+            {
+                if (!smoke.gameObject.activeSelf)
+                {
+                    smoke.gameObject.SetActive(true);
+                }
+
+                smoke.transform.position = hit.point;
+            }
+            else
+            {
+                smoke.gameObject.SetActive(false);
+            }
         }
         else
+        {
             Draw2DRay(laserFirePoint.position, laserFirePoint.transform.up * maxDistance);
+            smoke.SetActive(false);
+        }
     }
     
 
