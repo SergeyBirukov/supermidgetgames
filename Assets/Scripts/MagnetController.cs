@@ -19,6 +19,10 @@ public class MagnetController : MonoBehaviour
         };
         Debug.Log("Clicked");
         foreach (var rb in blocks.transform.GetComponentsInChildren<Rigidbody2D>())
-            rb.AddForce(_vector * 200f);
+        {
+            rb.AddForce(_vector * 500f);
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+        }
     }
 }
