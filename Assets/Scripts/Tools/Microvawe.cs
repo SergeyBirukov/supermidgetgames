@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Obstacles;
 using UnityEngine;
 
 public class Microvawe : MonoBehaviour
@@ -26,11 +27,11 @@ public class Microvawe : MonoBehaviour
 
     private void Shoot()
     {
-        var hit = Physics2D.Raycast(transform.position, transform.up);
+        var hit = Physics2D.Raycast(laserFirePoint.position, transform.up);
         if (hit)
         {
             Draw2DRay(laserFirePoint.position, hit.point);
-            var ice = hit.transform.GetComponent<Ice>();
+            var ice = hit.transform.GetComponent<IceObstacle>();
             if (ice && damageIntervalLeft < 0)
             {
                 ice.TakeDamage(damage);
@@ -47,7 +48,7 @@ public class Microvawe : MonoBehaviour
 
     private void Draw2DRay(Vector2 startPos, Vector2 endPos)
     {
-        lineRenderer.SetPosition(0 ,startPos);
+        lineRenderer.SetPosition(0, startPos);
         lineRenderer.SetPosition(1, endPos);
     }
 }
