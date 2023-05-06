@@ -781,6 +781,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4339492470756691688, guid: 97147b0a7c17e14468dcd1d41bba58b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339492471870354076, guid: 97147b0a7c17e14468dcd1d41bba58b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4339492471870354076, guid: 97147b0a7c17e14468dcd1d41bba58b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5794737839442937369, guid: 97147b0a7c17e14468dcd1d41bba58b5, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -850,6 +862,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7515120368209772288, guid: 6636759276912404b8dfe0d15fc141dd, type: 3}
+      propertyPath: dummyObstaclePrefab
+      value: 
+      objectReference: {fileID: 1459289858776594325, guid: 4825478b62a81a443a14c7dea65cefa2, type: 3}
     - target: {fileID: 7515120368209772289, guid: 6636759276912404b8dfe0d15fc141dd, type: 3}
       propertyPath: m_RootOrder
       value: 3

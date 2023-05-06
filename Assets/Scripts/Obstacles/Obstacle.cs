@@ -1,7 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace DefaultNamespace
+namespace Obstacles
 {
     public abstract class Obstacle: MonoBehaviour
     {
