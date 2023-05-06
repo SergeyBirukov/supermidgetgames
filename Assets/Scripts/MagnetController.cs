@@ -7,7 +7,7 @@ public class MagnetController : MonoBehaviour
     public string direction;
 
     private Vector2 _vector;
-    private void OnMouseDrag()
+    private void OnMouseDown()
     {
         _vector = direction switch
         {
