@@ -1038,7 +1038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f721d18d169472408e962ba40e649be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startScene: Level1
+  startScene: MagentScene
 --- !u!114 &2096542913
 MonoBehaviour:
   m_ObjectHideFlags: 0
