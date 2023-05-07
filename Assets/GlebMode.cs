@@ -9,7 +9,10 @@ public class GlebMode : MonoBehaviour
     void Awake()
     {
         if (Instance != null && Instance != this)
+        {
             Destroy(this.gameObject);
+            Instance.IsGlebMode = false;
+        }
         else
         {
             Instance = this;
