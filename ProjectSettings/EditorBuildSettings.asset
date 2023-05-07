@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VictoryScene.unity
     guid: 349bd2f21d2ed9a4e9cc18f60b9aee59
+  - enabled: 1
+    path: Assets/Scenes/MagnetPuzzle.unity
+    guid: 55443fbc35b4cec4d9f7b6f817d1d8ed
   m_configObjects: {}
