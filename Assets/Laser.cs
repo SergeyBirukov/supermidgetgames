@@ -9,9 +9,10 @@ public class Laser : MonoBehaviour
     [SerializeField] private float maxDistance = 100f;
     [SerializeField] private Transform shootPos;
     [SerializeField] private LineRenderer lineRenderer;
-    // private int index;
     [SerializeField] private int reflections = 5;
     private int currentReflection = 0;
+    private bool atTheEnd;
+    private static int connections;
 
     private void Start()
     {
@@ -19,51 +20,62 @@ public class Laser : MonoBehaviour
         lineRenderer.endWidth = 0.1f;
         lineRenderer.positionCount = 1;
         lineRenderer.SetPosition(currentReflection, shootPos.position);
-        LaserMagic(shootPos.position, transform.up);
+        
     }
 
     private void Update()
     {
-        
+        if (currentReflection > 1)
+            lineRenderer.positionCount = currentReflection;
+        currentReflection = 0;
+        LaserMagic(shootPos.position, transform.up);
     }
     
     public void LaserMagic(Vector2 startPosition, Vector2 direction)
     {
         var hit = Physics2D.Raycast(startPosition, direction, maxDistance);
-        lineRenderer.positionCount++;
+        if (currentReflection == lineRenderer.positionCount - 1)
+            lineRenderer.positionCount++;
         if (!hit)
-        { 
-         lineRenderer.SetPosition(currentReflection+1, direction*maxDistance);   
-         currentReflection++;
+        {
+            if (atTheEnd)
+            {
+                atTheEnd = false;
+                connections--;
+            }
+            lineRenderer.SetPosition(currentReflection+1, startPosition + direction*maxDistance);   
+            currentReflection++;
         }
         else
         {
             lineRenderer.SetPosition(currentReflection + 1, hit.point);
             currentReflection++;
-            if (currentReflection < reflections)
+            var mirror = hit.transform.GetComponent<Mirror>();
+            if (mirror)
             {
-                LaserMagic(hit.point + hit.normal, Vector2.Reflect(direction, hit.normal).normalized);
+                if (currentReflection < reflections)
+                {
+                    LaserMagic(hit.point + hit.normal, Vector2.Reflect(direction, hit.normal).normalized);
+                }
+            }
+
+            var end = hit.transform.GetComponent<CircleCollider2D>();
+            if (end && atTheEnd != true)
+            {
+                atTheEnd = true;
+                connections++;
+                if (connections == 2)
+                    Debug.Log("cringe");
+                if (connections >= 3)
+                    Debug.Log("VICTORY");
+            }
+            else if (atTheEnd)
+            {
+                atTheEnd = false;
+                connections--;
             }
         }
+        
     }
-
-    // private void LaserWork(Vector2 startPos, Vector2 direction)
-    // {
-    //     var hit = Physics2D.Raycast(startPos, direction);
-    //     if (hit)
-    //     {
-    //         Draw2DRay(startPos, hit.point);
-    //         LaserWork(hit.point, hit.transform.up);
-    //     }
-    //     else
-    //         Draw2DRay(startPos, direction * maxDistance);
-    // }
-
-
-    // private void Draw2DRay(Vector2 startPos, Vector2 endPos)
-    // {
-    //     lineRenderer.SetPosition(index, startPos);
-    //     index++;
-    //     lineRenderer.SetPosition(index, endPos);
-    // }
+    
 }
