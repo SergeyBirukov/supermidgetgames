@@ -1,3 +1,14 @@
-﻿fileFormatVersion: 2
+fileFormatVersion: 2
 guid: 38e9a7f8b3fb4261af6d1898079e21ec
-timeCreated: 1683373298
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - spawnArea: {instanceID: 0}
+  - dummyObstaclePrefab: {instanceID: 0}
+  - glebShark: {fileID: 21300000, guid: 816a214c98b977c41a197d9c46c8342f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

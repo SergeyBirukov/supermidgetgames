@@ -8,10 +8,18 @@ namespace Obstacles
         [SerializeField] private SpawnArea spawnArea;
         [SerializeField] private Obstacle dummyObstaclePrefab;
         [SerializeField] private float spawnDelayInSeconds;
+        [SerializeField] private Sprite glebShark;
 
         private void Spawn(Obstacle obstacle)
         {
-            Instantiate(obstacle, spawnArea.GetRandomPosition(), Quaternion.identity);
+            var inst = Instantiate(obstacle, spawnArea.GetRandomPosition(), Quaternion.identity);
+            if (GlebMode.Instance.IsGlebMode && (inst.GetComponent<FishLeft>() || inst.GetComponent<FishRight>()))
+            {
+                foreach (Transform tr in inst.transform)
+                {
+                    tr.GetComponent<SpriteRenderer>().sprite = glebShark;
+                }
+            }
         }
 
         private void Start()

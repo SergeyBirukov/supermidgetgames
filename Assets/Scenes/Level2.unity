@@ -790,6 +790,10 @@ PrefabInstance:
       value: -2.13
       objectReference: {fileID: 0}
     - target: {fileID: 7515120368209772288, guid: 6636759276912404b8dfe0d15fc141dd, type: 3}
+      propertyPath: glebShark
+      value: 
+      objectReference: {fileID: 21300000, guid: 816a214c98b977c41a197d9c46c8342f, type: 3}
+    - target: {fileID: 7515120368209772288, guid: 6636759276912404b8dfe0d15fc141dd, type: 3}
       propertyPath: dummyObstaclePrefab
       value: 
       objectReference: {fileID: 1659034348843502675, guid: b972aa4930bfe6b4e84ccabe8f54b572, type: 3}
@@ -4327,6 +4331,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.13
       objectReference: {fileID: 0}
+    - target: {fileID: 7515120368209772288, guid: 6636759276912404b8dfe0d15fc141dd, type: 3}
+      propertyPath: glebShark
+      value: 
+      objectReference: {fileID: 21300000, guid: 816a214c98b977c41a197d9c46c8342f, type: 3}
     - target: {fileID: 7515120368209772288, guid: 6636759276912404b8dfe0d15fc141dd, type: 3}
       propertyPath: dummyObstaclePrefab
       value: 
