@@ -2992,6 +2992,10 @@ PrefabInstance:
       propertyPath: m_Vertices.Array.data[71].position.y
       value: 2.7089
       objectReference: {fileID: 0}
+    - target: {fileID: 5191835287755610835, guid: 97147b0a7c17e14468dcd1d41bba58b5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a379ba4fe5389b499f9f4835f950f3b, type: 3}
     - target: {fileID: 5607578610952802276, guid: 97147b0a7c17e14468dcd1d41bba58b5, type: 3}
       propertyPath: m_Vertices.Array.size
       value: 81

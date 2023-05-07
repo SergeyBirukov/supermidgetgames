@@ -215,6 +215,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6232203824143226668, guid: 0b66da9e689726847bacb011509d984b, type: 3}
+      propertyPath: nextLevelName
+      value: Level3
+      objectReference: {fileID: 0}
     - target: {fileID: 6232203824143226669, guid: 0b66da9e689726847bacb011509d984b, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -2631,6 +2635,10 @@ PrefabInstance:
       propertyPath: m_Vertices.Array.data[71].position.y
       value: 2.7089
       objectReference: {fileID: 0}
+    - target: {fileID: 5191835287755610835, guid: 97147b0a7c17e14468dcd1d41bba58b5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c0921067fa2b8e24f87c2ab356da8ca8, type: 3}
     - target: {fileID: 5607578610952802276, guid: 97147b0a7c17e14468dcd1d41bba58b5, type: 3}
       propertyPath: m_Vertices.Array.size
       value: 81
